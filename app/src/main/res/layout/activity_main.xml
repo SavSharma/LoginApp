@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backlogin"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_in"
+        android:textSize="45sp"
+        android:layout_margin="89dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:id="@+id/signin"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/username"
+        android:hint="@string/username"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_below="@id/signin"
+        android:padding="20dp"
+        android:background="#FF87CEFA"
+        android:layout_margin="10dp"
+        android:drawableStart="@drawable/ic_person"
+        android:drawablePadding="10dp"
+        android:autofillHints="textusername"
+        tools:ignore="TextFields" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/username"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:autofillHints="textpassword"
+        android:background="#FF87CEFA"
+        android:drawableStart="@drawable/ic_info"
+        android:drawablePadding="10dp"
+        android:hint="@string/password"
+        android:padding="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        tools:ignore="TextFields" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/login"
+        android:layout_below="@id/password"
+        android:layout_centerHorizontal="true"
+        android:text="@string/login"
+        android:backgroundTint="@color/black"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/forgotpass"
+        android:layout_below="@id/login"
+        android:text="@string/forgot_password"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/others"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/socialicons"
+        android:gravity="center"
+        android:text="@string/or_sign_in_with"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/socialicons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/google"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/fb"
+            android:padding="10dp"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:src="@drawable/twitter"
+            android:padding="10dp"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+</RelativeLayout>
